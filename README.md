@@ -8,6 +8,7 @@ Guide for creating accessible websites
 If the primary language of the web page has not been identified, screen reading software in general will read out the content in the same language as the default setting for the screen reader. So if your screen reader has English set as the default language, it will read out web page content in English. 
 
 ``` html
+<!-- Set the screenreader language -->
 <html lang="en">
 ```
 
@@ -33,3 +34,19 @@ Allows vision impaired and users with motor disabilities to quickly bypass the m
 <section role="region">
 <form action="" role="search">
 ```
+
+## Styling
+
+### Focus
+
+Anything that is tabable or a navigation component, needs a visual indicator of the focus. Most browsers have this built in, but resets sometimes remove this.  To sensure a consistent style across browsers for focus you can set it like below.
+
+```html
+a:focus {
+  outline: none;
+  shadow-box: 12 12 blue;
+}
+```
+
+
+

@@ -48,5 +48,23 @@ a:focus {
 }
 ```
 
+## Forms
+
+### Inputs
+
+To create the connection between a label and input you must have a label with a for attribute that links to the id of the input field.  You can also apply `aria-required` to notify the screenreader what input data is required.
+
+``` html
+<form>
+  <div>
+    <label for="name">* Name:</label>
+    <input type="text" value="name" id="name" aria-required="true"/>
+  </div>
+  <div>
+    <label for="phone">Phone:</label>
+    <input type="text" value="phone" id="phone" aria-required="false"/>
+  </div>
+</form>  
+```
 
 

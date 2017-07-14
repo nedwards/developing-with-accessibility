@@ -7,7 +7,7 @@ Guide for creating accessible websites
 
 If the primary language of the web page has not been identified, screen reading software in general will read out the content in the same language as the default setting for the screen reader. So if your screen reader has English set as the default language, it will read out web page content in English. 
 
-``` html
+```html
 <!-- Set the screenreader language -->
 <html lang="en">
 ```
@@ -54,7 +54,7 @@ a:focus {
 
 To create the connection between a label and input you must have a label with a for attribute that links to the id of the input field.
 
-``` html
+```html
 <form>
   <div>
     <label for="name">* Name:</label>
@@ -65,6 +65,20 @@ To create the connection between a label and input you must have a label with a 
     <input type="text" value="phone" id="phone"/>
   </div>
 </form>  
+```
+
+### Input Errors
+
+`aria-invalid` If a form input is required and has not been entered apply this tag along with `aria-describedby` to link the input error to the appropriate message for the user. The alert message also contains a `role="alert"` tag to ensure the user is notified.
+
+```html
+<div class="form-row">
+  <label for="email">Email</label>
+  <input name="email" id="email" required aria-invalid="true" aria-describedby="emailErrorMessage">
+  <div class="error" id="emailErrorMessage" aria-hidden="false" role="alert" aria-atomic="true">
+    <p>Please enter your email!</p>
+  </div>
+</div>
 ```
 
 ## Aria Live Regions

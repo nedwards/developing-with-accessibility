@@ -1,2 +1,2 @@
 # Accessibility in development
-Guide for creating accessible components
+Guide for creating accessible websites

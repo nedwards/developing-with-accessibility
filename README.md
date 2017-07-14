@@ -14,7 +14,7 @@ If the primary language of the web page has not been identified, screen reading 
 
 ### Skip Links + Landmark Roles
 
-Allows vision impaired and users with motor disabilities to quickly bypass the main navigation and jump to sections of the page.
+Allows vision impaired and users with motor disabilities to quickly bypass the main navigation and jump to sections of the page.  The skip links correspond to the id of the landmark roles.
 
 ```html
 <!-- Skip links -->

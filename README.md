@@ -69,8 +69,35 @@ To create the connection between a label and input you must have a label with a 
 
 ## Aria Live Regions
 
-[dfdfd](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+[Mozilla - live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
+`aria-live`
+- `"polite"` Any updates made to this region are announced if the user is not currently doing anything.
+- `"assertive"` Any updates made to this region are announced to the user immediately.
+
+`aria-relevant`
+- `"additions"` Insertion of nodes into the live region should be considered relevant.
+- `"removals"` Deletion of nodes should be considered relevant.
+- `"text"` Changes to the textual content of existing nodes should be considered relevant.
+- `"all"` Equivalent to additions removals text.
+
+```html
+<ul id="region" aria-live="polite" aria-relevant="additions removals">
+	<!-- anything added or removed from within here will be notified via the screenreader to the user -->
+</ul>
+```
+
+## Aria Controls
+
+`aria-controls` is used to associate a control with the regions that it controls. Regions are identified via their ID, and multiple regions can be associated with a control using a space, e.g. `aria-controls="regionOne regionTwo"`.
+
+```html
+<button aria-controls="region">Click to remove hidden attribute and show div</button>
+
+<div id="region" role="region" aria-relevant="additions" aria-live="polite">
+  <div hidden>I will be read out by the screenreader once you click the button</div>
+</div>
+```
 
 
 

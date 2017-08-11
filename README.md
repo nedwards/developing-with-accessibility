@@ -112,34 +112,55 @@ To create the connection between a label and input you must have a label with a 
 
 ```html
 <form>
-  <div>
+  <fieldset>
     <label for="name">* Name:</label>
     <input type="text" value="name" id="name" required/>
-  </div>
-  <div>
+  </fieldset>
+  <fieldset>
     <label for="phone">Phone:</label>
     <input type="text" value="phone" id="phone"/>
-  </div>
+  </fieldset>
 </form>  
+```
+
+### Radio Buttons
+
+Radio buttons are probably one of a few instances where you don't have to link your label to the radio button group.  By providing a `legend` tag this will automatically be associated to the group for you.  You will also need to hide the `legend` tag via the `.sr-only` class.
+
+```html
+<fieldset tabindex="0">
+  <label>Label name</label>
+  <legend class="sr-only">Label name</legend>
+  <ul>
+    <li>
+      <input type="radio" name="radiogroup" value="Option 1" id="radio-1" tabindex="0">
+      <label for="radio-1">Option 1</label>
+    </li>
+    <li>
+      <input type="radio" name="radiogroup" value="Option 2" id="radio-2" tabindex="0">
+      <label for="radio-2">Option 2</label>
+    </li>
+  </ul>  
+</fieldset>
 ```
 
 ### Input Errors
 
-`aria-invalid` If a form input is required and has not been entered apply this tag along with `aria-describedby` to link the input error to the appropriate message for the user. The alert message also contains a `role="alert"` tag to ensure the user is notified.
+`aria-invalid` is required if a form input is in error. By applying `aria-invalid` to the input along with `aria-describedby` creates a link to the input error. The error alert message also contains a `role="alert"` tag to ensure the user is notified when an input is in error via the screenreader.
 
 ```html
-<div class="form-row">
+<fieldset>
   <label for="email">Email</label>
   <input name="email" id="email" required aria-invalid="true" aria-describedby="emailErrorMessage">
   <div class="error" id="emailErrorMessage" aria-hidden="false" role="alert" aria-atomic="true">
     <p>Please enter your email!</p>
   </div>
-</div>
+</fieldset>
 ```
 
 ## Aria Hidden
 
-`aria-hidden="true"` very useful when you don't wish to display certain content for screenreaders.
+`aria-hidden="true"` is very useful when you don't wish to display certain content for screenreaders.
 
 ### Icons
 
@@ -189,6 +210,8 @@ Very useful for checking if a page meets WCAG 2.0 color contrast requirements.  
 [ChromeVox - Chrome Extension](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
 Screenreader extension for Chrome.
 
+[Accessibility Developer Tools - Chrome Extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)
+Useful in auditing your page for any accessibility issues which will then be displayed within the developer console area.
 
 
 

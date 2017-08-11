@@ -22,11 +22,11 @@ Initially hide the skip links from view but then display the skip links when the
 
 ```html
 <!-- Skip links -->
-<a class="visuallyhidden" href="#header">Skip to header</a>
-<a class="visuallyhidden" href="#nav">Skip to navigation</a>
-<a class="visuallyhidden" href="#main">Skip to main content</a>
-<a class="visuallyhidden" href="#aside">Skip to side menu</a>
-<a class="visuallyhidden" href="#footer">Skip to footer</a>
+<a class="sr-only" href="#header">Skip to header</a>
+<a class="sr-only" href="#nav">Skip to navigation</a>
+<a class="sr-only" href="#main">Skip to main content</a>
+<a class="sr-only" href="#aside">Skip to side menu</a>
+<a class="sr-only" href="#footer">Skip to footer</a>
 
 <!-- Landmark roles -->
 <header id="header" role="banner">
@@ -45,12 +45,39 @@ Initially hide the skip links from view but then display the skip links when the
 
 Anything that is tabable or a navigation component, needs a visual indicator of the focus. Most browsers have this built in, but resets sometimes remove this.  To sensure a consistent style across browsers for focus you can set it like below.
 
-```html
+```css
 a:focus {
   outline: none;
   shadow-box: 12 12 blue;
 }
 ```
+
+### Visibility
+
+Class to display content only for screenreaders. Invisible to the user on the page but screenreaders will still be able to pick up on the content.  Useful for providing more detailed descriptions on the page that are beneficial to visually impaired users.
+
+```css
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+```
+
+Possible usage...
+
+```html
+<a href="http://www.google.com">
+	<i class="icon-google" aria-hidden="true"></a>
+	<span class="sr-only">External link to Google's homepage<span>
+</a>
+```
+
 
 ## Forms
 

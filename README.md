@@ -156,5 +156,10 @@ If using an icon font like FontAwesome, then be sure to hide the icon from scree
 </div>
 ```
 
+## Tools
+
+[Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll?hl=en)
+Very useful for checking if a page meets WCAG 2.0 color contrast requirements.  Once running the test, any text on the page that does not have an outline around it is considered non compliant.
+
 
 

@@ -112,6 +112,18 @@ To create the connection between a label and input you must have a label with a 
 </div>
 ```
 
+## Aria Hidden
+
+`aria-hidden="true"` very useful when you don't wish to display certain content for screenreaders.
+
+### Icons
+
+If using an icon font like FontAwesome, then be sure to hide the icon from screenreaders. Otherwise the icon `content=''` code will be read out to the user which is completely meaningless. Also be sure to provide a meaningful link description if an icon is being used as a link or navigation item.
+
+``` html
+<i aria-hidden=“true”></i>
+```
+
 ## Aria Live Regions
 
 [Mozilla - live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)

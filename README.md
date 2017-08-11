@@ -173,19 +173,27 @@ Possible usage...
 
 ### Labels + Inputs
 
-To create the connection between a label and input you must have a label with a `for=""` attribute that links to the `id=""` of the input field.
+To create a connection between the label and input field you must have a label with a `for=""` attribute that links to the `id=""` of the input.
 
 ```html
 <form>
   <fieldset>
     <label for="name">* Name:</label>
-    <input type="text" value="name" id="name" required/>
+    <input type="text" value="name" id="name" required aria-required="true" aria-invalid="false" />
   </fieldset>
   <fieldset>
     <label for="phone">Phone:</label>
-    <input type="text" value="phone" id="phone"/>
+    <input type="text" value="phone" id="phone" aria-invalid="false" />
   </fieldset>
 </form>  
+```
+
+### Required Inputs
+
+If your form has a mix of required and non-required form fields, add the `aria-required="true"` attribute to each input that is required. This will immediately identify them as required when using a screenreader.
+
+```html
+<input type="text" name="username" aria-required="true">
 ```
 
 ### Radio Buttons

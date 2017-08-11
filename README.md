@@ -46,7 +46,7 @@ Initially hide the skip links from view but then display the skip links when the
 Anything that is tabable or a navigation component, needs a visual indicator of the focus. Most browsers have this built in, but resets sometimes remove this.  To sensure a consistent style across browsers for focus you can set it like below.
 
 ```css
-a:focus {
+*:focus {
   outline: none;
   shadow-box: 12 12 blue;
 }

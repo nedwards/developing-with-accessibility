@@ -16,6 +16,10 @@ If the primary language of the web page has not been identified, screen reading 
 
 Allows vision impaired and users with motor disabilities to quickly bypass the main navigation and jump to sections of the page.  The skip links correspond to the id of the landmark roles.
 
+#### Best Practices
+
+Initially hide the skip links from view but then display the skip links when they have keyboard `:focus`.  That way there is a visual representation when a users initially tabs through the page.  Hidding the skip links form keyboard `:focus` can cause visual confusion for physically handicapped users, as they cannot locate where on the page the focus currently is. 
+
 ```html
 <!-- Skip links -->
 <a class="visuallyhidden" href="#header">Skip to header</a>
@@ -52,7 +56,7 @@ a:focus {
 
 ### Labels + Inputs
 
-To create the connection between a label and input you must have a label with a for attribute that links to the id of the input field.
+To create the connection between a label and input you must have a label with a `for=""` attribute that links to the `id=""` of the input field.
 
 ```html
 <form>

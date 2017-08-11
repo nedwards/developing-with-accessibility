@@ -12,6 +12,20 @@ If the primary language of the web page has not been identified, screen reading 
 <html lang="en">
 ```
 
+### Page Titles
+
+Users with visual disabilities rely on page titles to identify websites when they have multiple tabs open.
+Below is an example with the title split into three sections.
+
+```
+<title>Page name - Section name - Business name</title>
+```
+
+The title of each page in your site should:
+- Identify the subject of the Web page
+- Make sense when read out of context
+- Be short
+
 ### Skip Links + Landmark Roles
 
 Allows vision impaired and users with motor disabilities to quickly bypass the main navigation and jump to sections of the page.  The skip links correspond to the id of the landmark roles.
@@ -38,6 +52,17 @@ Initially hide the skip links from view but then display the skip links when the
 <section role="region">
 <form action="" role="search">
 ```
+
+### Tabindex
+
+Always structure your code appropriately as this is the best solution rather than forcing the index order, applying a positive tabindex order is not advised.
+
+#### Do
+- Use `tabindex="0"` to include an element in the natural tab order of the content
+- Use `tabindex="-1"` to exclude it from the natural tab order of the page
+
+#### Don't
+- Use `tabindex="1"` to set a specific tab order
 
 ## Styling
 
@@ -158,8 +183,12 @@ If using an icon font like FontAwesome, then be sure to hide the icon from scree
 
 ## Tools
 
-[Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll?hl=en)
+[Color Contrast Analyzer - Chrome Extension](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll?hl=en)
 Very useful for checking if a page meets WCAG 2.0 color contrast requirements.  Once running the test, any text on the page that does not have an outline around it is considered non compliant.
+
+[ChromeVox - Chrome Extension](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
+Screenreader extension for Chrome.
+
 
 
 

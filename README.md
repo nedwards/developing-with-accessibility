@@ -73,8 +73,8 @@ Possible usage...
 
 ```html
 <a href="http://www.google.com">
-	<i class="icon-google" aria-hidden="true"></a>
-	<span class="sr-only">External link to Google's homepage<span>
+  <i class="icon-google" aria-hidden="true"></a>
+  <span class="sr-only">External link to Google's homepage<span>
 </a>
 ```
 

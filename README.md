@@ -57,12 +57,69 @@ Initially hide the skip links from view but then display the skip links when the
 
 Always structure your code appropriately as this is the best solution rather than forcing the index order. Applying a positive `tabindex=""` order is not advised.
 
-#### Do
+#### Good
 - Use `tabindex="0"` to include an element in the natural tab order of the content
 - Use `tabindex="-1"` to exclude it from the natural tab order of the page
 
-#### Don't
+#### Bad
 - Use `tabindex="1"` to set a specific tab order
+
+### Headings
+
+Best practice is to not skip levels when using headings on the page. This is mostly an issue for older browsers like IE9 that does not support HTML5.  
+
+So this code..
+
+```html
+<section>
+  <h1>…</h1>
+  <article> 
+    <h1>…</h1>
+  <article> 
+  <article> 
+    <h1>…</h1> 
+  </article>
+</section>
+```
+
+Would be passed like this by IE9...
+
+```html
+<div>
+  <h1>…</h1>
+  <div>
+    <h1>…</h1>
+  <div> 
+  <div> 
+    <h1>…</h1>
+  </div> 
+<div>
+```
+
+Although if you site does not need to support older browsers then using the nested `section` and `article` structure will work fine.  However for maximum compatability it is always best to ensure correct levelling of headings.
+
+#### Good
+
+```html
+<body>
+  <h1>My website</h1>
+  <h2>Heading</h2>
+  <h3>Subheading</h3>
+  <h4>Heading</h4>
+</body>
+```
+
+#### Bad
+
+```html
+<body>
+  <h1>My website</h1>
+  <h4>Heading</h4>
+  <h2>Subheading</h2>
+  <h3>Heading</h3>
+</body>
+```
+
 
 ### Images
 

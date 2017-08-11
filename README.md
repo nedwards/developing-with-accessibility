@@ -1,4 +1,4 @@
-# Accessibility in development
+# Developing With Accessibility In Mind
 Guide for creating accessible websites
 
 ## Basics

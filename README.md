@@ -64,6 +64,14 @@ Always structure your code appropriately as this is the best solution rather tha
 #### Don't
 - Use `tabindex="1"` to set a specific tab order
 
+### Images
+
+Text alternative should contain a short description conveying the essential information presented by the image.
+
+```html
+<img src="beach-sunset.jpg" alt="Picture of a sunset on the beach">
+```
+
 ## Styling
 
 ### Focus

@@ -55,7 +55,7 @@ Initially hide the skip links from view but then display the skip links when the
 
 ### Tabindex
 
-Always structure your code appropriately as this is the best solution rather than forcing the index order, applying a positive tabindex order is not advised.
+Always structure your code appropriately as this is the best solution rather than forcing the index order. Applying a positive `tabindex=""` order is not advised.
 
 #### Do
 - Use `tabindex="0"` to include an element in the natural tab order of the content

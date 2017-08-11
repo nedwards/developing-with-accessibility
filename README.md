@@ -1,5 +1,5 @@
 # Developing With Accessibility In Mind
-Guide for creating accessible websites
+A guide for creating accessible content and components for your website.
 
 ## Basics
 

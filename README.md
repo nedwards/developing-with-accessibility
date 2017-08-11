@@ -53,6 +53,12 @@ Initially hide the skip links from view but then display the skip links when the
 <form action="" role="search">
 ```
 
+### Logo
+
+Use `<img>` or `<svg>` for heading logos, don't set via css as a background image. 
+
+In Windows high contrast mode, CSS background images are removed from web pages.  Therefore, low vision users who use Windows high contrast mode will not have access to the information that the image conveys.
+
 ### Tabindex
 
 Always structure your code appropriately as this is the best solution rather than forcing the index order. Applying a positive `tabindex=""` order is not advised.

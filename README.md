@@ -269,6 +269,12 @@ If using an icon font like FontAwesome, then be sure to hide the icon from scree
 </ul>
 ```
 
+Let's say you are on a quote page and the price is subject to change based on some form inputs.  You would want to notify the user once this happens so setting an `aria-live="assertive"` with a `role="status"` will ensure the user is notified when the amount is updated.
+
+```html
+<div aria-live="assertive" aria-atomic="true" role="status" className="sr-only">The current price is $</div>
+```
+
 ## Aria Controls
 
 `aria-controls` is used to associate a control with the regions that it controls. Regions are identified via their ID, and multiple regions can be associated with a control using a space, e.g. `aria-controls="regionOne regionTwo"`.

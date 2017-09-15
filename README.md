@@ -301,5 +301,8 @@ Screenreader extension for Chrome.
 [Accessibility Developer Tools - Chrome Extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)
 Useful in auditing your page for any accessibility issues which will then be displayed within the developer console area.
 
+## Resources
+
+[IBM - Va11yS](https://ibma.github.io/Va11yS/WCAG_ARIA/aria_techniques.html)
 
 

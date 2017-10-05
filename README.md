@@ -249,6 +249,32 @@ If using an icon font like FontAwesome, then be sure to hide the icon from scree
 <i aria-hidden=“true”></i>
 ```
 
+## Alerts
+
+### Loading Spinner
+
+When page content is being updated.
+
+```html
+<div role="alertdialog" aria-label=“Page is currently being updated“ aria-busy="true" aria-live="assertive"></div>
+```
+
+### Basic Dialog
+
+Alert the user when a session is about to expire, allowing them to take action.
+
+[AlertDialog](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+
+```html
+<div role="alertdialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+  <div role="document" tabindex="0">
+    <h2 id="dialog1Title">Your login session is about to expire</h2>
+    <p id="dialog1Desc">To extend your session, click the OK button</p>
+    <button>OK</button>
+  </div>
+</div>
+```
+
 ## Aria Live Regions
 
 [Mozilla - live regions](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)

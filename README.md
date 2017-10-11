@@ -251,6 +251,16 @@ If using an icon font like FontAwesome, then be sure to hide the icon from scree
 
 ## Alerts
 
+### Message
+
+Once the page has loaded this alert will be announced by the screenreader. 
+
+```html
+<div role="alert">
+  This is an alert message
+</div>
+```
+
 ### Loading Spinner
 
 When page content is being updated.
@@ -266,7 +276,7 @@ Alert the user when a session is about to expire, allowing them to take action.
 [AlertDialog](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
 
 ```html
-<div role="alertdialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div role="alertdialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc" tabindex="0">
   <div role="document" tabindex="0">
     <h2 id="dialog1Title">Your login session is about to expire</h2>
     <p id="dialog1Desc">To extend your session, click the OK button</p>

@@ -271,7 +271,7 @@ When page content is being updated.
 
 ### Basic Dialog
 
-Alert the user when a session is about to expire, allowing them to take action.
+Alert the user when a session is about to expire, allowing them to take action. `alertdialog` is different to a normal `alert` in the sense that a user can take action based on the alert message.  In this case the user can choose to extend their session by clicking the button.
 
 [AlertDialog](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
 

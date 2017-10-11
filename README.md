@@ -194,6 +194,20 @@ To create a connection between the label and input field you must have a label w
 </form>  
 ```
 
+### Help Text
+
+Use `aria-describedby` to link any useful help text to the input.  This could be used to relay information like the input format to the user. 
+
+```html
+<form class="c-form">
+  <fieldset class="c-fieldset">
+    <label class="c-label" for="dobInput">Date of birth</label>
+    <input type="text" class="c-input c-input--sm" name="dobInput" tabindex="0" aria-describedby="helpText" />
+    <div id="helpText" class="c-help__text">input format must be mm/dd/yyyy</div>
+  </fieldset>
+</form>
+```
+
 ### Required Inputs
 
 If your form has a mix of required and non-required form fields, add the `aria-required="true"` attribute to each input that is required. This will immediately identify them as required when using a screenreader.

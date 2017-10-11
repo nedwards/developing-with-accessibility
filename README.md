@@ -202,7 +202,7 @@ Use `aria-describedby` to link any useful help text to the input.  This could be
 <form class="c-form">
   <fieldset class="c-fieldset">
     <label class="c-label" for="dobInput">Date of birth</label>
-    <input type="text" class="c-input c-input--sm" name="dobInput" tabindex="0" aria-describedby="helpText" />
+    <input type="text" class="c-input" name="dobInput" tabindex="0" aria-describedby="helpText" />
     <div id="helpText" class="c-help__text">input format must be mm/dd/yyyy</div>
   </fieldset>
 </form>

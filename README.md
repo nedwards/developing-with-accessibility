@@ -208,6 +208,19 @@ Use `aria-describedby` to link any useful help text to the input.  This could be
 </form>
 ```
 
+### Help Links
+
+Any link on the page that provides some useful information can be labeled as an `information tooltip`.  Also if there are external links that direct the user away from the current page flow.  Then be sure to notify the user through the labelling as well. 
+
+```html
+<!-- Internal help link -->
+<a href="#" aria-label="Information tooltip. What is included in my policy?">Policy coverage</a>
+
+<!-- External link -->
+<a href="#" aria-label="External link. Read more information regarding your policy>Policy information</a>
+
+```
+
 ### Required Inputs
 
 If your form has a mix of required and non-required form fields, add the `aria-required="true"` attribute to each input that is required. This will immediately identify them as required when using a screenreader.

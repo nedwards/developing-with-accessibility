@@ -367,6 +367,7 @@ Useful in auditing your page for any accessibility issues which will then be dis
 ## Resources
 
 [ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal?utm_campaign=chrome_series_ariaauthoringpractices_061617&utm_source=chromedev&utm_medium=yt-desc)
+[eBay MIND Patterns](https://ebay.gitbooks.io/mindpatterns/content/disclosure/dialog.html?utm_campaign=chrome_series_ebaymindpatterns_061617&utm_source=chromedev&utm_medium=yt-desc)
 [IBM - Va11yS](https://ibma.github.io/Va11yS/WCAG_ARIA/aria_techniques.html)
 
 ## Videos

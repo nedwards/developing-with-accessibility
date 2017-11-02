@@ -223,10 +223,10 @@ Any link on the page that provides some useful information can be labeled as an 
 
 ### Required Inputs
 
-If your form has a mix of required and non-required form fields, add the `aria-required="true"` attribute to each input that is required. This will immediately identify them as required when using a screenreader.
+If your form has a mix of required and non-required form fields, add the `required` attribute to each input that is required. This will immediately identify them as required when using a screenreader.
 
 ```html
-<input type="text" name="username" aria-required="true">
+<input type="text" name="username" required>
 ```
 
 ### Radio Buttons
